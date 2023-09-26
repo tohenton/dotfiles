@@ -393,13 +393,17 @@
       (xref-show-xrefs-function . #'consult-xref)
       (xref-show-definitions-function . #'consult-xref)
       )
-    (leaf orderless
-      :url "https://github.com/oantolin/orderless"
+    (leaf fussy
+      :url "https://github.com/jojojames/fussy"
       :ensure t
-      :custom
-      (completion-styles . '(orderless basic))
-      (completion-category-defaults . nil)
-      (completion-category-overrides '((file (styles partial-completion)))))
+      :config
+      (push 'fussy completion-styles)
+      (setq
+       ;; For example, project-find-file uses 'project-files which uses
+       ;; substring completion by default. Set to nil to make sure it's using
+       ;; flx.
+       completion-category-defaults nil
+       completion-category-overrides nil))
     )
   (leaf marginalia
     :url "https://github.com/minad/marginalia"
