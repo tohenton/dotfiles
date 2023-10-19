@@ -263,6 +263,10 @@
     ((c-mode-hook c++-mode-hook) . (lambda ()
                                      (c-set-style "bsd")
                                      (setq c-basic-offset 4))))
+  (leaf soong-mode
+    :doc "major mode for editing Soong build files"
+    :url "https://github.com/bobrofon/soong-mode"
+    :ensure t)
   (leaf syntax-check
     :config
     (leaf flycheck
