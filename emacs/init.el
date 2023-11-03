@@ -103,6 +103,10 @@
     :url "https://github.com/strazzere/Emacs-Smali/"
     :el-get strazzere/Emacs-Smali
     :require t)
+  (leaf kotlin-mode
+    :doc "Major mode for kotlin"
+    :url "https://github.com/Emacs-Kotlin-Mode-Maintainers/kotlin-mode"
+    :ensure t)
   )
 
 (leaf system
