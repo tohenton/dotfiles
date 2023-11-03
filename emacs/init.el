@@ -178,6 +178,7 @@
     )
   (leaf cape
     :url "https://github.com/minad/cape"
+    :if (display-graphic-p)
     :ensure t
     :bind (("C-c p p" . completion-at-point)
          ("C-c p t" . complete-tag)
