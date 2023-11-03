@@ -98,6 +98,11 @@
     :ensure t)
   (leaf makefile-mode
     :hook (makefile-gmake-mode-hook . (lambda () (setq indent-tabs-mode t))))
+  (leaf smali-mode
+    :doc "Smali/Baksmali mode for Emacs"
+    :url "https://github.com/strazzere/Emacs-Smali/"
+    :el-get strazzere/Emacs-Smali
+    :require t)
   )
 
 (leaf system
