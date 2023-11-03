@@ -138,16 +138,17 @@
 
 (leaf completion
   :config
-  (leaf popon
-    :url "https://codeberg.org/akib/emacs-popon.git"
-    :unless (display-graphic-p)
-    :el-get (emacs-popon :url "https://codeberg.org/akib/emacs-popon.git"))
   (leaf corfu-terminal
     :url "https://codeberg.org/akib/emacs-corfu-terminal.git"
     :after corfu
     :unless (display-graphic-p)
     :el-get (emacs-corfu-terminal :url "https://codeberg.org/akib/emacs-corfu-terminal.git")
-    :config (corfu-terminal-mode 1))
+    :config
+    (leaf popon
+      :url "https://codeberg.org/akib/emacs-popon.git"
+      :unless (display-graphic-p)
+      :el-get (emacs-popon :url "https://codeberg.org/akib/emacs-popon.git"))
+    (corfu-terminal-mode 1))
   (leaf corfu
     :url "https://github.com/minad/corfu"
     :ensure t
