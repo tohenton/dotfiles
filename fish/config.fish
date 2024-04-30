@@ -29,7 +29,7 @@ function history-merge --on-event fish_preexec
 end
 
 # Aliases
-alias ls 'ls --color=auto'
+alias ls 'ls --color'
 alias ll 'ls -l'
 alias lll 'ls -l -D "%Y-%m-%d %H:%M" | rg -v / | fzf --preview="bat --color=always {-1}" --header-lines=1 --preview-window=down,border-top'
 alias now 'date +%Y-%m-%d--%H-%M-%S'
@@ -39,6 +39,9 @@ if command -sq colordiff
 end
 alias jman 'LANG=ja_JP.utf8 man'
 alias OD 'od -v -tx1z -Ax'
+if command -sq bat
+    alias less bat
+end
 
 # Suppress greeting message
 set -U fish_greeting ""
