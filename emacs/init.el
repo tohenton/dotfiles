@@ -109,6 +109,11 @@
     :ensure t)
   (leaf apache-mode
     :ensure t)
+  (leaf cmake-mode
+    :ensure t
+    :mode (
+           ("CMakeLists.txt'" . cmake-mode)
+           ("\\.cmake\\'" . cmake-mode)))
   )
 
 (leaf system
