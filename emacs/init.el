@@ -107,6 +107,8 @@
     :doc "Major mode for kotlin"
     :url "https://github.com/Emacs-Kotlin-Mode-Maintainers/kotlin-mode"
     :ensure t)
+  (leaf apache-mode
+    :ensure t)
   )
 
 (leaf system
