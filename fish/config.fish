@@ -133,10 +133,12 @@ end
 ################################################################################
 # Golang
 ################################################################################
-set -Ux GOENV_ROOT $HOME/.goenv
-fish_add_path $GOENV_ROOT/bin
-eval (goenv init - | source)
-fish_add_path $GOPATH/bin
+if command -sq goenv
+    set -Ux GOENV_ROOT $HOME/.goenv
+    fish_add_path $GOENV_ROOT/bin
+    eval (goenv init - | source)
+    fish_add_path $GOPATH/bin
+end
 
 ################################################################################
 # Misc. tools
