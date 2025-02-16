@@ -114,6 +114,8 @@
     :mode (
            ("CMakeLists.txt'" . cmake-mode)
            ("\\.cmake\\'" . cmake-mode)))
+  (leaf dockerfile-mode
+    :ensure t)
   )
 
 (leaf system
