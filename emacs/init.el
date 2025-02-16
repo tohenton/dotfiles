@@ -685,6 +685,19 @@
   (leaf truncate-line-binding
     :bind ("M-z" . toggle-truncate-lines)
     )
+  (leaf my-copy-word-at-point
+    :doc "Copy the word at the cursor to kill-ring"
+    :preface
+    (defun copy-word-at-point ()
+      (interactive)
+      (let ((word (thing-at-point 'word t)))
+        (if word
+            (progn
+              (kill-new word)
+              (message "Copied: %s" word))
+          (message "No word at point"))))
+    :bind ("<f5>" . copy-word-at-point)
+    )
   )
 
 (leaf history
