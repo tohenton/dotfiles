@@ -160,17 +160,6 @@
 
 (leaf completion
   :config
-  (leaf corfu-terminal
-    :url "https://codeberg.org/akib/emacs-corfu-terminal.git"
-    :after corfu
-    :unless (display-graphic-p)
-    :el-get (emacs-corfu-terminal :url "https://codeberg.org/akib/emacs-corfu-terminal.git")
-    :config
-    (leaf popon
-      :url "https://codeberg.org/akib/emacs-popon.git"
-      :unless (display-graphic-p)
-      :el-get (emacs-popon :url "https://codeberg.org/akib/emacs-popon.git"))
-    (corfu-terminal-mode 1))
   (leaf corfu
     :url "https://github.com/minad/corfu"
     :ensure t
@@ -198,6 +187,17 @@
       :config
       (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
     )
+  (leaf corfu-terminal
+    :url "https://codeberg.org/akib/emacs-corfu-terminal.git"
+    :after corfu
+    :unless (display-graphic-p)
+    :el-get (emacs-corfu-terminal :url "https://codeberg.org/akib/emacs-corfu-terminal.git")
+    :config
+    (leaf popon
+      :url "https://codeberg.org/akib/emacs-popon.git"
+      :unless (display-graphic-p)
+      :el-get (emacs-popon :url "https://codeberg.org/akib/emacs-popon.git"))
+    (corfu-terminal-mode 1))
   (leaf cape
     :url "https://github.com/minad/cape"
     :if (display-graphic-p)
