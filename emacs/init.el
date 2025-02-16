@@ -126,6 +126,9 @@
   (leaf jenkinsfile-mode
     :url "https://github.com/john2x/jenkinsfile-mode"
     :ensure t)
+  (leaf generic-x
+    :url "http://emacs.rubikitch.com/generic-x/"
+    :require t)
   )
 
 (leaf system
