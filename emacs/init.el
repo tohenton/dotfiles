@@ -123,6 +123,9 @@
   (leaf vimrc-mode
     :url "https://github.com/mcandre/vimrc-mode"
     :ensure t)
+  (leaf jenkinsfile-mode
+    :url "https://github.com/john2x/jenkinsfile-mode"
+    :ensure t)
   )
 
 (leaf system
