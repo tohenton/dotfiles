@@ -383,6 +383,11 @@
       :hook (prog-mode-hook . hes-mode))
     (leaf whitespace-trailing
       :custom (show-trailing-whitespace . t))
+    (leaf comment-dwim-2
+      :doc "A replacement for the emacs's built-in command 'comment-dwim'"
+      :url "https://github.com/remyferre/comment-dwim-2"
+      :ensure t
+      :bind ("M-;" . comment-dwim-2))
     )
   )
 
