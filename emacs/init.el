@@ -120,6 +120,9 @@
     :custom
     (sh-basic-offset . 2)
     (sh-indentation . 2))
+  (leaf vimrc-mode
+    :url "https://github.com/mcandre/vimrc-mode"
+    :ensure t)
   )
 
 (leaf system
