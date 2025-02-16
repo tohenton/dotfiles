@@ -20,6 +20,9 @@ zsh:
 	@ln -sfnv $(abspath zsh/.zshrc)  ~/
 	@ln -sfnv $(abspath zsh/.zlogin) ~/
 
+bash:
+	@ln -sfnv $(abspath bash/.bashrc) ~/
+
 git:
 	@mkdir -p ~/.config/git
 	@ln -sfnv $(abspath git/config) ~/.config/git/config
@@ -43,6 +46,7 @@ uninstall:
 	@-rm -v ~/.config/fish/functions/fish_right_prompt.fish
 	@-rm -v ~/.zshrc
 	@-rm -v ~/.zlogin
+	@-rm -v ~/.bashrc
 	@-rm -v ~/.config/git/config
 	@-rm -v ~/.flake8
 	@-rm -v ~/.ipython/profile_default/ipython_config.py
