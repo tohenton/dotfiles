@@ -662,10 +662,11 @@
     :doc "Japanese incremental search through dynamic pattern expansion"
     :url "https://github.com/emacs-jp/migemo"
     :ensure t
+    :when (executable-find "cmigemo")
     :custom
     (migemo-command . "cmigemo")
     (migemo-options . '("-q" "--emacs"))
-    (migemo-directory . "/opt/homebrew/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict")
+    (migemo-directory . "/usr/share/cmigemo/utf-8/migemo-dict")
     (migemo-user-dictionary . nil)
     (migemo-regex-dictionary . nil)
     (migemo-coding-system . 'utf-8-unix)
@@ -675,6 +676,12 @@
     :config
     (load-library "migemo")
     (migemo-init))
+  (leaf migemo-directory-darwin
+    :after migemo
+    :when IS-MAC
+    :custom
+    (migemo-directory . "/opt/homebrew/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict")
+    )
   )
 
 (leaf history
