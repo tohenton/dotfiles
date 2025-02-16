@@ -116,6 +116,10 @@
            ("\\.cmake\\'" . cmake-mode)))
   (leaf dockerfile-mode
     :ensure t)
+  (leaf sh-mode
+    :custom
+    (sh-basic-offset . 2)
+    (sh-indentation . 2))
   )
 
 (leaf system
