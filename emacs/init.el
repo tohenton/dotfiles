@@ -682,6 +682,9 @@
     :custom
     (migemo-directory . "/opt/homebrew/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict")
     )
+  (leaf truncate-line-binding
+    :bind ("M-z" . toggle-truncate-lines)
+    )
   )
 
 (leaf history
