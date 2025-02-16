@@ -235,7 +235,7 @@
     )
   )
 
-(leaf programing
+(leaf programming
   :config
   (leaf lsp
     :config
