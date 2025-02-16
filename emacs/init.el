@@ -190,7 +190,7 @@
   (leaf corfu-terminal
     :url "https://codeberg.org/akib/emacs-corfu-terminal.git"
     :after corfu
-    :unless (display-graphic-p)
+    :when (eq (framep-on-display) 't)
     :el-get (emacs-corfu-terminal :url "https://codeberg.org/akib/emacs-corfu-terminal.git")
     :config
     (leaf popon
