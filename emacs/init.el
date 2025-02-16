@@ -240,7 +240,10 @@
   (leaf lsp
     :config
     (leaf lsp-mode
-      :ensure t)
+      :ensure t
+      :config
+      (read-process-output-max . (* 1024 1024))
+      )
     (leaf eglot
       :ensure t
       :hook
