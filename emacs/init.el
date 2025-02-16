@@ -295,7 +295,16 @@
     :hook
     ((c-mode-hook c++-mode-hook) . (lambda ()
                                      (c-set-style "bsd")
-                                     (setq c-basic-offset 4))))
+                                     (setq c-basic-offset 4)))
+    :bind
+    ("C-M-n" . forward-list)
+    ("C-M-p" . backward-list)
+    :config
+    (leaf clang-format
+      :url https://github.com/sonatard/clang-format
+      :doc "Clang-format emacs integration for use with C/Objective-C/C++"
+      :ensure t
+    ))
   (leaf soong-mode
     :doc "major mode for editing Soong build files"
     :url "https://github.com/bobrofon/soong-mode"
