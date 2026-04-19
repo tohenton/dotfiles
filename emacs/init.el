@@ -345,7 +345,7 @@
     (leaf dumb-jump
       :doc "Jump to definition for 50+ languages without configuration"
       :url "https://github.com/jacktasia/dumb-jump"
-      :ensure t
+      :ensure nil
       :config (dumb-jump-mode)
       :custom
       (dumb-jump-force-searcher . 'rg)
