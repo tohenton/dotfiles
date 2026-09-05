@@ -685,6 +685,12 @@
     :custom
     (migemo-directory . "/opt/homebrew/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict")
     )
+  (leaf paren-jump
+    :doc "Jump to corresponding parenthesis"
+    :after dumb-jump
+    :bind
+    ("C-M-n" . forward-list)
+    ("C-M-p" . backward-list))
   (leaf truncate-line-binding
     :bind ("M-z" . toggle-truncate-lines)
     )
