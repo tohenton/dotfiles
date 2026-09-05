@@ -246,7 +246,7 @@
       (read-process-output-max . 1048576)
       )
     (leaf eglot
-      :ensure t
+      :ensure nil
       :hook
       (python-mode-hook . eglot-ensure)
       (c-mode-hook . eglot-ensure)
