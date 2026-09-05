@@ -241,8 +241,8 @@
     :config
     (leaf lsp-mode
       :ensure t
-      :config
-      (read-process-output-max . (* 1024 1024))
+      :custom
+      (read-process-output-max . 1048576)
       )
     (leaf eglot
       :ensure t
