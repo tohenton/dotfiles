@@ -294,6 +294,12 @@
     :url "https://github.com/dominikh/go-mode.el"
     :ensure t)
   (leaf cc-mode
+    :config
+    (leaf clang-format
+      :url https://github.com/sonatard/clang-format
+      :doc "Clang-format emacs integration for use with C/Objective-C/C++"
+      :ensure t
+      )
     :doc "major mode for editing C and similar languages"
     :defvar (c-basic-offset)
     :hook
