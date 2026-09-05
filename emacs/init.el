@@ -671,6 +671,7 @@
     :doc "Japanese incremental search through dynamic pattern expansion"
     :url "https://github.com/emacs-jp/migemo"
     :ensure t
+    :require t
     :when (executable-find "cmigemo")
     :custom
     (migemo-command . "cmigemo")
@@ -698,22 +699,23 @@
     ("C-M-n" . forward-list)
     ("C-M-p" . backward-list))
   (leaf truncate-line-binding
-    :bind ("M-z" . toggle-truncate-lines)
-    )
-  (leaf my-copy-word-at-point
-    :doc "Copy the word at the cursor to kill-ring"
-    :preface
-    (defun copy-word-at-point ()
-      (interactive)
-      (let ((word (thing-at-point 'word t)))
-        (if word
-            (progn
-              (kill-new word)
-              (message "Copied: %s" word))
-          (message "No word at point"))))
-    :bind ("<f5>" . copy-word-at-point)
-    )
+    :bind ("M-z" . toggle-truncate-lines))
   )
+(leaf my-copy-word-at-point
+  :doc "Copy  the word at the cursor to kill-ring"
+  :preface
+  (defun copy-word-at-point ()
+    (interactive)
+    (let ((word (thing-at-point 'word t)))
+      (if word
+          (progn
+            (kill-new word)
+            (message "Copied: %s" word))
+        (message "No word at point"))))
+  :bind ("<f5>" . copy-word-at-point)
+  )
+
+
 
 (leaf history
   :config
