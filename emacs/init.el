@@ -721,7 +721,7 @@
   :config
   (leaf recentf
     :doc "setup a menu of recently opened files"
-    :url ("https://tomoya.hatenadiary.org/entry/20110217/1297928222"
+    :url ''("https://tomoya.hatenadiary.org/entry/20110217/1297928222"
           "https://qiita.com/tadsan/items/68b53c2b0e8bb87a78d7")
     :config (recentf-mode 1)
     :custom
