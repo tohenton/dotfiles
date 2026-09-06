@@ -49,6 +49,15 @@ end
 # Suppress greeting message
 set -U fish_greeting ""
 
+if functions --query tide
+    set -g tide_git_truncation_length 64
+
+    # Show username and hostname always
+    set -g tide_left_prompt_items os context pwd git newline character
+    set -g tide_right_prompt_items status cmd_duration jobs direnv node python rustc java php pulumi ruby go gcloud kubectl distrobox toolbox terraform aws nix_shell crystal elixir zig time
+    set -g tide_context_always_display true
+end
+
 
 ################################################################################
 # Locale
