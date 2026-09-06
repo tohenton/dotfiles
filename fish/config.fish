@@ -187,10 +187,8 @@ end
 set -Ux LSCOLORS gxfxcxdxbxegedabagacad
 
 # fzf
-if command -sq fzf
-    set -Ux FZF_TMUX 1
-    set -Ux FZF_TMUX_HEIGHT 30
-    set -Ux FZF_DEFAULT_OPTS "--no-mouse --ansi --reverse --height 50% --multi"
+if command -q fzf
+    set -Ux FZF_DEFAULT_OPTS "--no-mouse --ansi --reverse --height 75% --multi --select-1 --exit-0"
 end
 
 # GNU Global
