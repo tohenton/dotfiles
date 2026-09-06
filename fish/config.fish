@@ -42,9 +42,6 @@ if command -sq colordiff
 end
 alias jman 'LANG=ja_JP.utf8 man'
 alias OD 'od -v -tx1z -Ax'
-if command -sq bat
-    alias less bat
-end
 
 # Suppress greeting message
 set -U fish_greeting ""
