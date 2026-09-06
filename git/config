@@ -5,6 +5,7 @@
 	sg = !"git sg"
 	co = checkout
 	amend = commit --amend
+	contain = !"git branch --all --contain"
 
 [core]
 	editor = vim
