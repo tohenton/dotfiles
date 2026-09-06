@@ -29,6 +29,8 @@ end
 # Aliases
 alias ls 'ls --color'
 alias ll 'ls -l'
+alias lla 'ls -la'
+
 if command -q rg && command -q fzf
     alias lll 'ls -l --time-style "+%Y-%m-%d %H:%M" | rg -v / | fzf --preview=(command -s bat; or command -s batcat)" --color=always {-1}" --header-lines=1 --preview-window=down,border-top'
 end
