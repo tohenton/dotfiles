@@ -58,6 +58,11 @@ if functions --query tide
     set -g tide_context_always_display true
 end
 
+# Increase the maximum number of open file descriptors
+if status --is-login
+    ulimit --file-descriptor-count 65535
+end
+
 
 ################################################################################
 # Locale
