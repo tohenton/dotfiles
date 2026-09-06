@@ -684,7 +684,6 @@
     (migemo-use-frequent-pattern-alist . t)
     (migemo-pattern-alist-length . 1024)
     :config
-    (load-library "migemo")
     (migemo-init))
   (leaf migemo-directory-darwin
     :after migemo
