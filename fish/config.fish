@@ -222,6 +222,11 @@ if command -sq batcat
     alias bat batcat
 end
 
+# zoxide
+if command -q zoxide
+    zoxide init fish | source
+end
+
 ################################################################################
 # Node
 ################################################################################
