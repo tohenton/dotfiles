@@ -162,11 +162,12 @@ end
 ################################################################################
 # Golang
 ################################################################################
-if command -sq goenv
-    set -Ux GOENV_ROOT $HOME/.goenv
+if test -d ~/.goenv
+    set -gx GOENV_ROOT ~/.goenv
     fish_add_path $GOENV_ROOT/bin
-    eval (goenv init - | source)
-    fish_add_path $GOPATH/bin
+    if command -q goenv; and status is-interactive
+        goenv init - | source
+    end
 end
 
 ################################################################################
