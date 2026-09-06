@@ -537,7 +537,6 @@
     :blackout t)
   )
 
-
 (leaf utility
   :config
   (leaf discover-my-major
@@ -732,7 +731,6 @@
   (history-length . 1000)
   (history-delete-duplicates . t)
   )
-
 (leaf file-save
   :config
   (leaf give-executable-permissionfile-on-save
@@ -742,7 +740,6 @@
     :doc "Add final new line when file saved"
     :custom (require-final-newline . t))
   )
-
 (leaf appearance
   :config
   (leaf theme
