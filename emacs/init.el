@@ -778,7 +778,8 @@
     :custom (inhibit-startup-message . t))
   (leaf rainbow-delimiters
     :ensure t
-    :config (rainbow-delimiters-mode))
+    :config (rainbow-delimiters-mode)
+    :hook (prog-mode-hook . rainbow-delimiters-mode))
   (leaf enable-go-address-mode
     :doc "Highlight all the URLs in the buffer and turns them into clickable buttons"
     :global-minor-mode global-goto-address-mode)
