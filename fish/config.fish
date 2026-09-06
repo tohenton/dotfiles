@@ -76,10 +76,12 @@ set -Ux LC_CTYPE en_US.UTF-8
 ################################################################################
 
 # pyenv
-if command -sq pyenv
-    set -Ux PYENV_ROOT ~/.pyenv
+if test -d ~/.pyenv
+    set -gx PYENV_ROOT ~/.pyenv
     fish_add_path $PYENV_ROOT/bin
-    pyenv init - | source
+    if command -q pyenv; and status is-interactive
+        pyenv init - fish | source
+    end
 end
 
 # venv
