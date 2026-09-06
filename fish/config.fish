@@ -106,6 +106,14 @@ function __auto_activate_venv --on-variable PWD --description "Activate/Deactiva
     end
 end
 
+# uv
+if command -q uv
+    uv generate-shell-completion fish | source
+    if test -d ~/.venv
+        source ~/.venv/bin/activate.fish
+    end
+end
+
 
 ################################################################################
 # Emacs
