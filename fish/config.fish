@@ -37,9 +37,11 @@ end
 
 alias now 'date +%Y-%m-%d--%H-%M-%S'
 alias today 'date +%Y-%m-%d'
-if command -sq colordiff
+
+if command -q colordiff
     alias diff colordiff
 end
+
 alias jman 'LANG=ja_JP.utf8 man'
 alias OD 'od -v -tx1z -Ax'
 
@@ -192,14 +194,14 @@ end
 set -Ux GTAGSLABEL pygments
 
 # translate-shell
-if command -sq trans
+if command -q trans
     alias ej 'trans en:ja'
     alias je 'trans ja:en'
 end
 
 # deepl-cli
 # https://github.com/eggplants/deepl-cli/
-if command -sq deepl
+if command -q deepl
     function dej
         echo $argv | deepl en:ja
     end
@@ -210,7 +212,7 @@ end
 
 # mattn/memo
 # https://teratail.com/questions/36536
-if command -sq memo
+if command -q memo
     alias m memo
 end
 
@@ -218,7 +220,7 @@ end
 set -Ux LESS '-R'  # R: ANSI color
 
 # bat
-if command -sq batcat
+if command -q batcat
     alias bat batcat
 end
 
