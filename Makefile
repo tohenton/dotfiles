@@ -18,6 +18,8 @@ fish:
 	@ln -sfnv $(abspath fish/config.fish)                      ~/.config/fish/
 	@ln -sfnv $(abspath fish/functions/fish_prompt.fish)       ~/.config/fish/functions/
 	@ln -sfnv $(abspath fish/functions/fish_right_prompt.fish) ~/.config/fish/functions/
+	@ln -sfnv $(abspath fish/functions/fish_remove_path.fish) ~/.config/fish/functions/
+
 
 git:
 	@mkdir -p ~/.config/git
