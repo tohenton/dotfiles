@@ -20,3 +20,5 @@ PROMPT_COMMAND=sync_history  # Execute sync_history right before primary prompt
 # Expand history size
 HISTSIZE=1000000
 HISTFILESIZE=20000
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
