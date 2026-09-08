@@ -311,3 +311,5 @@ eval "$(pyenv init -)"
 if [[ -f "${HOME}/.zshrc.local" ]]; then
     source "${HOME}/.zshrc.local"
 fi
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
