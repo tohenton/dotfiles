@@ -194,7 +194,7 @@ end
 set -Ux GTAGSLABEL pygments
 
 # translate-shell
-if command -q trans
+if command -q trans; and  command -q gawk
     alias ej 'trans en:ja'
     alias je 'trans ja:en'
 end
